@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticketmaster</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/generics.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1 class="header-logo">
+          <svg
+            fill="white"
+            title="Ticketmaster Tickets"
+            viewBox="0 0 332.4 47.2"
+            width="150"
+            height="20"
+            class="AnimatedLogo__Logo-p0rx2p-0 NPWPK logo logo--full"
+          >
+            <g>
+              <path
+                class="st0 single-letter"
+                d="M1.3,14.5h6l1.4-6.6L17.6,5l-2,9.5H23l-1.3,6.1h-7.4l-3,13.9c-0.2,0.7-0.4,1.9-0.4,3.1 c0,1.9,1.3,3.1,3.2,3.1c1.5,0,3-0.3,4-0.7l-1.4,6.4c-1.4,0.3-3,0.7-4.5,0.7c-5.6,0-9.6-2.2-9.6-8.3c0-2.5,0.5-4.9,1.1-7.4L6,20.6 H0L1.3,14.5z"
+              ></path>
+              <g class="letters-group">
+                <path
+                  class="st0"
+                  d="M216.1,41.5H216c-2.8,3.6-5.7,5.6-10.3,5.6c-5.7,0-9.8-3.2-9.8-9.1c0-10.5,11.7-11.3,19.5-11.3h2.9 c0.2-0.9,0.2-1.8,0.2-2.7c0-3.2-3.5-4.1-6.4-4.1c-3.6,0-7.2,0.9-10.5,2.5l1.2-6.6c3.5-1.2,7.1-1.9,10.8-1.9 c6.4,0,12.4,2.3,12.4,9.8c0,4.3-3.2,16.8-3.9,22.8h-7L216.1,41.5 M208,41.1c6.2,0,8.1-4.3,9.4-9.4h-2.9c-4,0-10.7,0.7-10.7,6.1 C203.8,39.9,205.9,41.1,208,41.1z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M26.4,14.5h8.3l-6.8,31.8h-8.3L26.4,14.5 M29.4,0.8h8.3L36,8.7h-8.3L29.4,0.8z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M59.7,21.8c-1.6-1.1-3.8-1.6-6.1-1.6c-6.6,0-10.3,6.2-10.3,12.2c0,4.1,1.4,8.3,7,8.3c2,0,4.6-0.6,6.7-1.6 l-0.9,6.6c-2.5,1.2-5.3,1.5-8,1.5c-8.2,0-13.5-5.5-13.5-13.7c0-11.1,7.4-19.6,18.8-19.6c3.1,0,6.1,0.6,8.3,1.2L59.7,21.8z"
+                ></path>
+                <polygon
+                  class="st0"
+                  points="68.8,0 77.1,0 71.6,26.1 71.7,26.1 83.3,14.5 94,14.5 78.8,29 88.3,46.4 79,46.4 70.8,29.5 70.7,29.5 67.1,46.4 59,46.4 			"
+                ></polygon>
+                <path
+                  class="st0"
+                  d="M123.9,14.5h6l1.4-6.6l8.9-2.9l-2,9.5h7.4l-1.3,6.1h-7.4l-3,13.9c-0.2,0.7-0.4,1.9-0.4,3.1 c0,1.9,1.3,3.1,3.2,3.1c1.5,0,3-0.3,4-0.7l-1.4,6.4c-1.4,0.3-3,0.7-4.5,0.7c-5.6,0-9.6-2.2-9.6-8.3c0-2.5,0.5-4.9,1.1-7.4 l2.3-10.8h-6L123.9,14.5z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M121.1,25.9c0-8.1-5.2-12.1-13-12.1C97.6,13.8,90,23.3,90,33.2c0,9.5,6.2,13.9,15.3,13.9 c3.4,0,6.9-0.8,10.1-1.8l1.1-6.6c-3.1,1.4-6.4,2.3-9.8,2.3c-5.3,0-8.4-1.9-8.8-6.9l0,0c0-0.3,0-0.6,0-0.9c0-0.1,0-0.1,0-0.2v-0.1 l0,0c0-2.2,0.5-4.3,1.3-6.3l0,0c1.6-4.1,3.8-6.9,8.7-6.9c3.5,0,5.3,1.9,5.3,5.3c0,0.7-0.1,1.4-0.2,2.2h-11.3 c-0.7,2.5-0.9,4.2-0.9,5.7h19.5C120.8,30.6,121.1,28.3,121.1,25.9z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M149.2,18c0.2-1.2,0.5-2.5,0.7-3.5h7.7l-0.7,4.3h0.1c2.2-3.3,5.9-5,9.8-5c3.8,0,7.7,2.2,8.1,6.1h0.1 c2.1-4.1,6.7-6.1,11.2-6.1c4.8,0,8.8,3.9,8.8,8.7c0,2.8-0.7,6.1-1.4,8.7l-3.3,15.2H182l3.3-15.5c0.4-1.9,1.1-4.9,1.1-6.8 c0-2.3-1.8-3.8-3.9-3.8c-5.8,0-7.2,6.7-8.2,11L171,46.4h-8.3l3.3-15.5c0.4-1.9,1.1-4.9,1.1-6.8c0-2.3-1.8-3.8-3.9-3.8 c-5.6,0-7.2,6.7-8.2,11l-3.3,15.1h-8.3L149.2,18z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M250.7,21c-0.9-0.5-3.2-1.2-5.5-1.2c-2.5,0-5.6,0.7-5.6,3.2c0,4,10.8,5.5,10.8,13.3 c0,8.3-7.2,10.8-14.3,10.8c-3.3,0-6.7-0.5-9.7-1.9l1.8-6.6c2.3,1.3,4.7,2.5,7.9,2.5c2.8,0,5.7-0.9,5.7-3.5 c0-5.1-10.8-5.6-10.8-13.6c0-7.5,7.2-10.1,13.8-10.1c3,0,6.1,0.6,7.8,1L250.7,21z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M256,14.5h6l1.4-6.6l8.9-2.9l-2,9.5h7.4l-1.3,6.1H269l-3,13.9c-0.2,0.7-0.4,1.9-0.4,3.1 c0,1.9,1.3,3.1,3.2,3.1c1.5,0,3-0.3,4-0.7l-1.4,6.4c-1.4,0.3-3,0.7-4.5,0.7c-5.6,0-9.6-2.2-9.6-8.3c0-2.5,0.5-4.9,1-7.4l2.4-10.8 h-6L256,14.5z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M312.2,18.8c0.2-1.4,0.5-2.8,0.7-4.3h7.9l-1.1,6h0.1c1.5-3.5,5.6-6.7,9.4-6.7c1.1,0,2.2,0.1,3.2,0.3 l-1.7,8.1c-0.9-0.3-2.1-0.5-3.2-0.5c-5.9,0-8.7,5.3-9.8,10.4l-3,14.3h-8.3L312.2,18.8z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M306.5,25.9c0-8.1-5.2-12.1-13-12.1c-10.4,0-18.1,9.5-18.1,19.4c0,9.5,6.2,13.9,15.3,13.9 c3.4,0,6.9-0.8,10.1-1.8l1.1-6.6c-3.1,1.4-6.4,2.3-9.8,2.3c-5.3,0-8.4-1.9-8.8-6.9l0,0c0-0.3,0-0.6,0-0.9c0-0.1,0-0.1,0-0.2v-0.1 l0,0c0-2.2,0.5-4.3,1.3-6.3l0,0c1.6-4.1,3.8-6.9,8.7-6.9c3.5,0,5.3,1.9,5.3,5.3c0,0.7-0.1,1.4-0.2,2.2h-11.3 c-0.7,2.5-0.9,4.2-0.9,5.7h19.5C306.2,30.6,306.5,28.3,306.5,25.9z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </h1>
+        <div class="navbar-right-small">
+          <span class="sign-in">
+            <svg
+              class="styles__SignedOutUserIcon-a86vwg-3 fLkHnx UserMenuLabel__UserMenuIcon-sc-1otw80v-0 gWbbRd"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <path d="M24 0H0v24h24z"></path>
+                <path
+                  fill="white"
+                  fill-rule="nonzero"
+                  d="M12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11-4.925 11-11 11zm0-1c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 7.5a.5.5 0 1 1-1 0V19a6 6 0 1 1 12 0v1.5a.5.5 0 1 1-1 0V19a5 5 0 0 0-10 0v1.5z"
+                ></path>
+              </g>
+            </svg>
+          </span>
+          <span class="header-sell-btn">Sell</span>
+          <span class="hamburger"><i class="fa-solid fa-bars"></i></span>
+        </div>
+
+        <div class="navbar-right-med">
+          <a href="/">Concerts</a>
+          <a href="/">Sports</a>
+          <a href="/">More</a>
+          <a href="/">Sign In</a>
+          <a href="/">Sell</a>
+          <a href="/">Gift Cards</a>
+          <a href="/">Help</a>
+        </div>
+
+        <div class="navbar-right-lg">
+          <div class="navbar-right-lg-left">
+            <a href="/">Concerts</a>
+            <a href="/">Sports</a>
+            <a href="/">Arts & Theater</a>
+            <a href="/">Family</a>
+            <a href="/">More</a>
+          </div>
+          <div class="navbar-right-lg-right">
+            <a href="/">Sign In</a>
+            <a href="/">Sell</a>
+            <a href="/">Gift Cards</a>
+            <a href="/">Help</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-content">
+        <h2 class="header-content-header">Let's Make Live Happen</h2>
+        <p class="header-content-text">
+          Shop millions of live events and discover can't-miss concerts, games,
+          theater and more.
+        </p>
+        <div class="search-area">
+          <div class="search-top">
+            <input
+              type="text"
+              name=""
+              class="zip"
+              placeholder="City or Zip Code"
+            />
+            <input type="text" name="" class="date" placeholder="All Dates" />
+          </div>
+          <div class="search-bottom">
+            <input
+              type="text"
+              name=""
+              class="search-bar"
+              placeholder="Search for artists, venues, and events"
+            />
+            <button class="search-btn">Search</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="scroll-container">
+        <div class="scroll-card card-1">
+          <img
+            src="/assets/images/thomas-rhett-card-img.jpg"
+            class="event-img"
+            alt="event poster"
+          />
+          <div class="card-text">
+            <h2 class="event-title">Thomas Rhett</h2>
+            <p class="event-subtext">
+              Pick your perfect location with Official Platinum Seats to see him
+              live.
+            </p>
+            <button class="event-tickets-btn">See Tickets</button>
+          </div>
+        </div>
+        <div class="scroll-card side-card card-2">
+          <img
+            src="/assets/images/weeknd-card-img.jpg"
+            class="event-img"
+            alt="event poster"
+          />
+          <div class="card-text">
+            <h2 class="event-title">The Weeknd</h2>
+            <p class="event-subtext">
+              See him live on the After Hours Til Dawn Tour
+            </p>
+            <button class="event-tickets-btn">See Tickets</button>
+          </div>
+        </div>
+        <div class="scroll-card side-card card-3">
+          <img
+            src="/assets/images/wwe-card-img.jpg"
+            class="event-img"
+            alt="event poster"
+          />
+          <div class="card-text">
+            <h2 class="event-title">Tickets on-sale now!</h2>
+            <p class="event-subtext">WWE is coming to a city near you!</p>
+            <button class="event-tickets-btn">See Tickets</button>
+          </div>
+        </div>
+        <div class="scroll-card card-4">
+          <img
+            src="/assets/images/advert.jpeg"
+            class="event-img"
+            alt="ADVERT SECTION"
+          />
+        </div>
+      </div>
+      <div class="amex-container">
+        <div class="amex-section-header">
+          <div class="amex-logo">
+            <svg
+              id="prefix__Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0"
+              y="0"
+              xml:space="preserve"
+              viewBox="5 10 39.38 32"
+              class="styles__Logo-z9g45i-5 giqZQn"
+            >
+              <style>
+                .prefix__st1 {
+                  fill: #006fcf;
+                }
+              </style>
+              <switch>
+                <g>
+                  <path fill="#fff" d="M12.35 10v32h32V10h-32z"></path>
+                  <path
+                    class="prefix__st1"
+                    d="M38.675 17.563l.96-2.656h4.715V10h-32v32h32v-4.885h-4.683L38.078 35.3l-1.632 1.814H23.902V26.939h-4.31l5.611-12.032h5.056l.95 2.058v-2.058h6.485l.981 2.656zm-7.86 7.552H33l-3.926-8.299h-2.602l-3.926 8.299h2.166l.704-1.579h4.682l.715 1.579zm4.106-7.094l.501 1.259 2.315 5.835h1.888l2.304-5.835.501-1.259v7.094h1.92v-8.299h-3.37l-2.049 5.27-.256.66-.256-.66-2.037-5.27h-3.381v8.299h1.92V18.02zm-7.755 1.611l.587-1.301.586 1.301 1.035 2.283h-3.232l1.024-2.283zm-1.28 7.307v8.266h7.115v-1.632h-5.195v-1.696h5.088v-1.621h-5.088v-1.685h5.195v-1.632h-7.115zm14.763 8.266h2.56l-3.85-4.16 3.85-4.106h-2.486l-2.592 2.773-2.56-2.773h-2.57l3.84 4.149L33 35.205h2.453l2.613-2.784 2.582 2.784zm1.269-4.149l2.432 2.453v-4.874l-2.432 2.421zM7.45 42a2.445 2.445 0 002.45-2.468 2.433 2.433 0 00-2.444-2.455A2.443 2.443 0 005 39.545 2.43 2.43 0 007.45 42zm.006-.295c-1.199 0-2.135-.968-2.135-2.173 0-1.199.93-2.16 2.129-2.16 1.193 0 2.13.968 2.13 2.173 0 1.199-.93 2.16-2.124 2.16zm-.91-.865h.378v-1.141h.564l.61 1.14h.41l-.641-1.185c.359-.09.596-.314.596-.744 0-.5-.352-.769-.968-.769h-.95v2.699zm.378-1.443v-.916h.545c.391 0 .616.122.616.449 0 .346-.225.467-.61.467h-.55z"
+                  ></path>
+                </g>
+              </switch>
+            </svg>
+          </div>
+          <div class="amex-header-right">
+            <div>
+              <h3 class="amex-header">
+                American Express Exclusive Early Access
+              </h3>
+              <p class="amex-subtext">
+                Card Members get early access to tickets.
+              </p>
+            </div>
+            <a href="/" class="amex-link">See All</a>
+            <a href="/" class="amex-link amex-link-lg">See All Amex Offers</a>
+          </div>
+        </div>
+
+        <div class="amex-card-container">
+          <div class="amex-card">
+            <img
+              src="/assets/images/melendi.jpg"
+              alt="amex card img"
+              class="amex-img"
+            />
+            <div class="amex-card-text">
+              <h3 class="amex-card-date">SAT · MAR 11 · 8:00 PM</h3>
+              <h4 class="amex-card-name">Melendi - Likes Y Cicatrices</h4>
+              <h5 class="amex-card-location">
+                New York, NY · Radio City Music Hall
+              </h5>
+            </div>
+          </div>
+          <div class="amex-card">
+            <img
+              src="/assets/images/blues-clues.jpg"
+              alt="amex card img"
+              class="amex-img"
+            />
+            <div class="amex-card-text">
+              <h3 class="amex-card-date">SUN · OCT 9 · 2:00 PM</h3>
+              <h4 class="amex-card-name">Blue's Clues & You! Live On Stage</h4>
+              <h5 class="amex-card-location">
+                Newark, NJ · New Jersey Performing Arts Center
+              </h5>
+            </div>
+          </div>
+
+          <div class="amex-card">
+            <img
+              src="/assets/images/real-talk.jpg"
+              alt="amex card img"
+              class="amex-img"
+            />
+            <div class="amex-card-text">
+              <h3 class="amex-card-date">FRI · NOV 11 · 8:00 PM</h3>
+              <h4 class="amex-card-name">Real Talk Comedy Tour</h4>
+              <h5 class="amex-card-location">
+                Miami, FL · James L Knight Center
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-container">
+        <h2 class="category-title">Browse by Category</h2>
+        <div class="category-cards">
+          <img src="/assets/images/Concerts.jpg" alt="" class="category-img" />
+          <img src="/assets/images/Sports.jpg" alt="" class="category-img" />
+          <img src="/assets/images/Arts.jpg" alt="" class="category-img" />
+          <img src="/assets/images/Family.jpg" alt="" class="category-img" />
+        </div>
+      </div>
+      <div class="top-selling-container">
+        <h2 class="top-selling-title">Top Selling</h2>
+        <div class="selling-container">
+          <div class="selling-container-header">
+            <h2 class="selling-title">Concerts</h2>
+            <a href="/" class="selling-link">See All</a>
+            <a href="/" class="selling-link selling-link-med"
+              >See All Concerts</a
+            >
+          </div>
+          <div class="selling-cards">
+            <div class="selling-card">
+              <img
+                src="/assets/images/imagine-dragons.jpg"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Imagine Dragons</h4>
+                <p class="selling-card-info">27 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/reba-small.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Reba McEntire</h4>
+                <p class="selling-card-info">19 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/garth-small.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Garth Brooks</h4>
+                <p class="selling-card-info">10 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/harry-styles-small.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Harry Styles</h4>
+                <p class="selling-card-info">84 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets//images/def-leppard-small.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Def Leppard</h4>
+                <p class="selling-card-info">27 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets//images/def-leppard-small.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Pearl Jam</h4>
+                <p class="selling-card-info">16 Events</p>
+              </div>
+            </div>
+            <div class="selling-card selling-card-show-lg">
+              <img
+                src="/assets//images/def-leppard-small.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Pearl Jam</h4>
+                <p class="selling-card-info">16 Events</p>
+              </div>
+            </div>
+            <div class="selling-card selling-card-show-lg">
+              <img
+                src="/assets//images/def-leppard-small.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Pearl Jam</h4>
+                <p class="selling-card-info">16 Events</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="selling-container">
+          <div class="selling-container-header">
+            <h2 class="selling-title">Sports</h2>
+            <a href="/" class="selling-link">See All</a>
+            <a href="/" class="selling-link selling-link-med">See All Sports</a>
+          </div>
+          <div class="selling-cards">
+            <div class="selling-card">
+              <img
+                src="/assets/images/houston.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Houston Texans</h4>
+                <p class="selling-card-info">30 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/dallas.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Dallas Cowboys</h4>
+                <p class="selling-card-info">20 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/seattle.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Seattle Mariners</h4>
+                <p class="selling-card-info">93 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/colorado.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Colorado Avalanche</h4>
+                <p class="selling-card-info">84 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets//images/boston.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Boston Bruins</h4>
+                <p class="selling-card-info">85 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets//images/minnesota.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Minnesota Wild</h4>
+                <p class="selling-card-info">89 Events</p>
+              </div>
+            </div>
+            <div class="selling-card selling-card-show-lg">
+              <img
+                src="/assets//images/columbus.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Columbus Blue Jackets</h4>
+                <p class="selling-card-info">86 Events</p>
+              </div>
+            </div>
+            <div class="selling-card selling-card-show-lg">
+              <img
+                src="/assets//images/miami.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Miami Heat</h4>
+                <p class="selling-card-info">3 Events</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="selling-container">
+          <div class="selling-container-header">
+            <h2 class="selling-title">Arts & Theater</h2>
+            <a href="/" class="selling-link">See All</a>
+            <a href="/" class="selling-link selling-link-med"
+              >See All Arts & Theater</a
+            >
+          </div>
+          <div class="selling-cards">
+            <div class="selling-card">
+              <img
+                src="/assets/images/rockhart.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Chris Rock & Kevin Hart</h4>
+                <p class="selling-card-info">5 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/kevin-hart.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Kevin Hart</h4>
+                <p class="selling-card-info">68 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/mulaney.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">John Mulaney</h4>
+                <p class="selling-card-info">83 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/hisaishi.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Joe Hisaishi</h4>
+                <p class="selling-card-info">7 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets//images/billburr.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Bill Burr</h4>
+                <p class="selling-card-info">42 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets//images/segura.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Tom Segura</h4>
+                <p class="selling-card-info">92 Events</p>
+              </div>
+            </div>
+            <div class="selling-card selling-card-show-lg">
+              <img
+                src="/assets//images/rupaul.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">RuPaul's Drag Race</h4>
+                <p class="selling-card-info">149 Events</p>
+              </div>
+            </div>
+            <div class="selling-card selling-card-show-lg">
+              <img
+                src="/assets//images/tumua.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Tumua Tuinei</h4>
+                <p class="selling-card-info">1 Event</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="selling-container">
+          <div class="selling-container-header">
+            <h2 class="selling-title">Family</h2>
+            <a href="/" class="selling-link">See All</a>
+            <a href="/" class="selling-link selling-link-med">See All Family</a>
+          </div>
+          <div class="selling-cards">
+            <div class="selling-card">
+              <img
+                src="/assets/images/hero.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">
+                  Disney On Ice presents Find Your Hero
+                </h4>
+                <p class="selling-card-info">22 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/dude.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Dude Perfect</h4>
+                <p class="selling-card-info">15 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/frozen.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">
+                  Disney On Ice presents Frozen & Encanto
+                </h4>
+                <p class="selling-card-info">70 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets/images/pbr.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">PBR: Team Series</h4>
+                <p class="selling-card-info">40 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets//images/ovo.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Cirque du Soleil: OVO</h4>
+                <p class="selling-card-info">57 Events</p>
+              </div>
+            </div>
+            <div class="selling-card">
+              <img
+                src="/assets//images/celebrate.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">
+                  Disney On Ice presents: Let's Celebrate
+                </h4>
+                <p class="selling-card-info">67 Events</p>
+              </div>
+            </div>
+            <div class="selling-card selling-card-show-lg">
+              <img
+                src="/assets//images/blue-man.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">Blue Man Group On Tour</h4>
+                <p class="selling-card-info">2 Events</p>
+              </div>
+            </div>
+            <div class="selling-card selling-card-show-lg">
+              <img
+                src="/assets//images/tina.webp"
+                alt=""
+                class="selling-card-img"
+              />
+              <div class="selling-card-text">
+                <h4 class="selling-card-title">
+                  TINA - The Tina Turner Musical (NY)
+                </h4>
+                <p class="selling-card-info">192 Events</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-info">
+        <div class="footer-list-container-lg">
+          <div class="list-container">
+            <h4 class="list-title">Helpful Links</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item">My Account</li>
+              <li class="footer-list-item">Ticket Your Event</li>
+              <li class="footer-list-item">Refunds and Exchanges</li>
+              <li class="footer-list-item">Get Help</li>
+              <li class="footer-list-item">Sell</li>
+              <li class="footer-list-item">Gift Cards</li>
+              <li class="footer-list-item">N.Y. Registered Brokers</li>
+              <li class="footer-list-item">Do Not Sell My Information</li>
+            </ul>
+          </div>
+          <div class="list-container">
+            <h4 class="list-title">Our Network</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item">Live Nation</li>
+              <li class="footer-list-item">House of Blues</li>
+              <li class="footer-list-item">Front Gate Tickets</li>
+              <li class="footer-list-item">TicketWeb</li>
+              <li class="footer-list-item">universe</li>
+              <li class="footer-list-item">NFL</li>
+              <li class="footer-list-item">NBA</li>
+              <li class="footer-list-item">NHL</li>
+            </ul>
+          </div>
+          <div class="list-container">
+            <h4 class="list-title">About Us</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item">Who We Are</li>
+              <li class="footer-list-item">Ticketmaster Blog</li>
+              <li class="footer-list-item">Ticketing 101</li>
+              <li class="footer-list-item">Privacy Policy</li>
+              <li class="footer-list-item">Work With Us</li>
+              <li class="footer-list-item">Innovation</li>
+            </ul>
+          </div>
+          <div class="list-container">
+            <h4 class="list-title">Friends & Partners</h4>
+            <ul class="footer-list">
+              <li class="footer-list-item">American Express</li>
+              <li class="footer-list-item">Allianz</li>
+              <li class="footer-list-item">AWS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-btm">
+          <a class="logo-lg" href="/new/" title="Get Our App"
+            ><svg
+              width="119"
+              height="17"
+              viewBox="0 0 332.4 47.2"
+              data-tid="headerHomeLogo"
+            >
+              <g fill="rgba(255, 255, 255, 1)" fill-rule="evenodd">
+                <path
+                  class="st0"
+                  d="M216.1,41.5H216c-2.8,3.6-5.7,5.6-10.3,5.6c-5.7,0-9.8-3.2-9.8-9.1c0-10.5,11.7-11.3,19.5-11.3h2.9 c0.2-0.9,0.2-1.8,0.2-2.7c0-3.2-3.5-4.1-6.4-4.1c-3.6,0-7.2,0.9-10.5,2.5l1.2-6.6c3.5-1.2,7.1-1.9,10.8-1.9 c6.4,0,12.4,2.3,12.4,9.8c0,4.3-3.2,16.8-3.9,22.8h-7L216.1,41.5 M208,41.1c6.2,0,8.1-4.3,9.4-9.4h-2.9c-4,0-10.7,0.7-10.7,6.1 C203.8,39.9,205.9,41.1,208,41.1z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M1.3,14.5h6l1.4-6.6L17.6,5l-2,9.5H23l-1.3,6.1h-7.4l-3,13.9c-0.2,0.7-0.4,1.9-0.4,3.1 c0,1.9,1.3,3.1,3.2,3.1c1.5,0,3-0.3,4-0.7l-1.4,6.4c-1.4,0.3-3,0.7-4.5,0.7c-5.6,0-9.6-2.2-9.6-8.3c0-2.5,0.5-4.9,1.1-7.4L6,20.6 H0L1.3,14.5z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M26.4,14.5h8.3l-6.8,31.8h-8.3L26.4,14.5 M29.4,0.8h8.3L36,8.7h-8.3L29.4,0.8z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M59.7,21.8c-1.6-1.1-3.8-1.6-6.1-1.6c-6.6,0-10.3,6.2-10.3,12.2c0,4.1,1.4,8.3,7,8.3c2,0,4.6-0.6,6.7-1.6 l-0.9,6.6c-2.5,1.2-5.3,1.5-8,1.5c-8.2,0-13.5-5.5-13.5-13.7c0-11.1,7.4-19.6,18.8-19.6c3.1,0,6.1,0.6,8.3,1.2L59.7,21.8z"
+                ></path>
+                <polygon
+                  class="st0"
+                  points="68.8,0 77.1,0 71.6,26.1 71.7,26.1 83.3,14.5 94,14.5 78.8,29 88.3,46.4 79,46.4 70.8,29.5 70.7,29.5 67.1,46.4 59,46.4 			"
+                ></polygon>
+                <path
+                  class="st0"
+                  d="M123.9,14.5h6l1.4-6.6l8.9-2.9l-2,9.5h7.4l-1.3,6.1h-7.4l-3,13.9c-0.2,0.7-0.4,1.9-0.4,3.1 c0,1.9,1.3,3.1,3.2,3.1c1.5,0,3-0.3,4-0.7l-1.4,6.4c-1.4,0.3-3,0.7-4.5,0.7c-5.6,0-9.6-2.2-9.6-8.3c0-2.5,0.5-4.9,1.1-7.4 l2.3-10.8h-6L123.9,14.5z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M121.1,25.9c0-8.1-5.2-12.1-13-12.1C97.6,13.8,90,23.3,90,33.2c0,9.5,6.2,13.9,15.3,13.9 c3.4,0,6.9-0.8,10.1-1.8l1.1-6.6c-3.1,1.4-6.4,2.3-9.8,2.3c-5.3,0-8.4-1.9-8.8-6.9l0,0c0-0.3,0-0.6,0-0.9c0-0.1,0-0.1,0-0.2v-0.1 l0,0c0-2.2,0.5-4.3,1.3-6.3l0,0c1.6-4.1,3.8-6.9,8.7-6.9c3.5,0,5.3,1.9,5.3,5.3c0,0.7-0.1,1.4-0.2,2.2h-11.3 c-0.7,2.5-0.9,4.2-0.9,5.7h19.5C120.8,30.6,121.1,28.3,121.1,25.9z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M149.2,18c0.2-1.2,0.5-2.5,0.7-3.5h7.7l-0.7,4.3h0.1c2.2-3.3,5.9-5,9.8-5c3.8,0,7.7,2.2,8.1,6.1h0.1 c2.1-4.1,6.7-6.1,11.2-6.1c4.8,0,8.8,3.9,8.8,8.7c0,2.8-0.7,6.1-1.4,8.7l-3.3,15.2H182l3.3-15.5c0.4-1.9,1.1-4.9,1.1-6.8 c0-2.3-1.8-3.8-3.9-3.8c-5.8,0-7.2,6.7-8.2,11L171,46.4h-8.3l3.3-15.5c0.4-1.9,1.1-4.9,1.1-6.8c0-2.3-1.8-3.8-3.9-3.8 c-5.6,0-7.2,6.7-8.2,11l-3.3,15.1h-8.3L149.2,18z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M250.7,21c-0.9-0.5-3.2-1.2-5.5-1.2c-2.5,0-5.6,0.7-5.6,3.2c0,4,10.8,5.5,10.8,13.3 c0,8.3-7.2,10.8-14.3,10.8c-3.3,0-6.7-0.5-9.7-1.9l1.8-6.6c2.3,1.3,4.7,2.5,7.9,2.5c2.8,0,5.7-0.9,5.7-3.5 c0-5.1-10.8-5.6-10.8-13.6c0-7.5,7.2-10.1,13.8-10.1c3,0,6.1,0.6,7.8,1L250.7,21z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M256,14.5h6l1.4-6.6l8.9-2.9l-2,9.5h7.4l-1.3,6.1H269l-3,13.9c-0.2,0.7-0.4,1.9-0.4,3.1 c0,1.9,1.3,3.1,3.2,3.1c1.5,0,3-0.3,4-0.7l-1.4,6.4c-1.4,0.3-3,0.7-4.5,0.7c-5.6,0-9.6-2.2-9.6-8.3c0-2.5,0.5-4.9,1-7.4l2.4-10.8 h-6L256,14.5z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M312.2,18.8c0.2-1.4,0.5-2.8,0.7-4.3h7.9l-1.1,6h0.1c1.5-3.5,5.6-6.7,9.4-6.7c1.1,0,2.2,0.1,3.2,0.3 l-1.7,8.1c-0.9-0.3-2.1-0.5-3.2-0.5c-5.9,0-8.7,5.3-9.8,10.4l-3,14.3h-8.3L312.2,18.8z"
+                ></path>
+                <path
+                  class="st0"
+                  d="M306.5,25.9c0-8.1-5.2-12.1-13-12.1c-10.4,0-18.1,9.5-18.1,19.4c0,9.5,6.2,13.9,15.3,13.9 c3.4,0,6.9-0.8,10.1-1.8l1.1-6.6c-3.1,1.4-6.4,2.3-9.8,2.3c-5.3,0-8.4-1.9-8.8-6.9l0,0c0-0.3,0-0.6,0-0.9c0-0.1,0-0.1,0-0.2v-0.1 l0,0c0-2.2,0.5-4.3,1.3-6.3l0,0c1.6-4.1,3.8-6.9,8.7-6.9c3.5,0,5.3,1.9,5.3,5.3c0,0.7-0.1,1.4-0.2,2.2h-11.3 c-0.7,2.5-0.9,4.2-0.9,5.7h19.5C306.2,30.6,306.5,28.3,306.5,25.9z"
+                ></path>
+              </g></svg
+          ></a>
+          <p class="terms">
+            By continuing past this page, you agree to our
+            <span>Terms of Use.</span>
+          </p>
+          <p class="privacy privacy-sm">
+            <span>Privacy Policy</span> | © 1999-2022 Ticketmaster. All rights
+            reserved.
+          </p>
+          <p class="privacy privacy-lg">©Ticketmaster 2022</p>
+          <p class="warning">Do Not Sell My Information</p>
+          <div class="country-lg">
+            <svg height="13" width="22" viewBox="0 0 640 480">
+              <g fill-rule="evenodd" transform="scale(.9375)">
+                <g stroke-width="1pt">
+                  <path
+                    d="M0 0h972.81v39.385H0zm0 78.77h972.81v39.385H0zm0 78.77h972.81v39.385H0zm0 78.77h972.81v39.385H0zm0 78.77h972.81v39.385H0zm0 78.77h972.81v39.385H0zm0 78.77h972.81v39.385H0z"
+                    fill="#bd3d44"
+                  ></path>
+                  <path
+                    d="M0 39.385h972.81V78.77H0zm0 78.77h972.81v39.385H0zm0 78.77h972.81v39.385H0zm0 78.77h972.81v39.385H0zm0 78.77h972.81v39.385H0zm0 78.77h972.81v39.385H0z"
+                    fill="#fff"
+                  ></path>
+                </g>
+                <path fill="#192f5d" d="M0 0h389.12v275.69H0z"></path>
+                <g fill="#fff">
+                  <path
+                    d="M32.427 11.8l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.853 0l3.541 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735H93.74zm64.856 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.269 6.734 3.54-10.896-9.269-6.735h11.458zm64.852 0l3.54 10.896h11.457l-9.269 6.735 3.54 10.896-9.268-6.734-9.27 6.734 3.541-10.896-9.27-6.735h11.458zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.27 6.734 3.542-10.896-9.27-6.735h11.458zM64.855 39.37l3.54 10.896h11.458L70.583 57l3.542 10.897-9.27-6.734-9.269 6.734L59.126 57l-9.269-6.734h11.458zm64.852 0l3.54 10.896h11.457L135.435 57l3.54 10.897-9.268-6.734-9.27 6.734L123.978 57l-9.27-6.734h11.458zm64.855 0l3.54 10.896h11.458L200.29 57l3.541 10.897-9.27-6.734-9.268 6.734L188.833 57l-9.269-6.734h11.457zm64.855 0l3.54 10.896h11.458L265.145 57l3.541 10.897-9.269-6.734-9.27 6.734L253.69 57l-9.27-6.734h11.458zm64.852 0l3.54 10.896h11.457L329.997 57l3.54 10.897-9.268-6.734-9.27 6.734L318.54 57l-9.27-6.734h11.458zM32.427 66.939l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.853 0l3.541 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735H93.74zm64.856 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.269 6.734 3.54-10.896-9.269-6.735h11.458zm64.852 0l3.54 10.896h11.457l-9.269 6.735 3.54 10.896-9.268-6.734-9.27 6.734 3.541-10.896-9.27-6.735h11.458zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.27 6.734 3.542-10.896-9.27-6.735h11.458zM64.855 94.508l3.54 10.897h11.458l-9.27 6.734 3.542 10.897-9.27-6.734-9.269 6.734 3.54-10.897-9.269-6.734h11.458zm64.852 0l3.54 10.897h11.457l-9.269 6.734 3.54 10.897-9.268-6.734-9.27 6.734 3.541-10.897-9.27-6.734h11.458zm64.855 0l3.54 10.897h11.458l-9.27 6.734 3.541 10.897-9.27-6.734-9.268 6.734 3.54-10.897-9.269-6.734h11.457zm64.855 0l3.54 10.897h11.458l-9.27 6.734 3.541 10.897-9.269-6.734-9.27 6.734 3.542-10.897-9.27-6.734h11.458zm64.852 0l3.54 10.897h11.457l-9.269 6.734 3.54 10.897-9.268-6.734-9.27 6.734 3.541-10.897-9.27-6.734h11.458zM32.427 122.078l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.853 0l3.541 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735H93.74zm64.856 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.269 6.734 3.54-10.896-9.269-6.735h11.458zm64.852 0l3.54 10.896h11.457l-9.269 6.735 3.54 10.896-9.268-6.734-9.27 6.734 3.541-10.896-9.27-6.735h11.458zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.27 6.734 3.542-10.896-9.27-6.735h11.458zM64.855 149.647l3.54 10.897h11.458l-9.27 6.734 3.542 10.897-9.27-6.734-9.269 6.734 3.54-10.897-9.269-6.734h11.458zm64.852 0l3.54 10.897h11.457l-9.269 6.734 3.54 10.897-9.268-6.734-9.27 6.734 3.541-10.897-9.27-6.734h11.458zm64.855 0l3.54 10.897h11.458l-9.27 6.734 3.541 10.897-9.27-6.734-9.268 6.734 3.54-10.897-9.269-6.734h11.457zm64.855 0l3.54 10.897h11.458l-9.27 6.734 3.541 10.897-9.269-6.734-9.27 6.734 3.542-10.897-9.27-6.734h11.458zm64.852 0l3.54 10.897h11.457l-9.269 6.734 3.54 10.897-9.268-6.734-9.27 6.734 3.541-10.897-9.27-6.734h11.458z"
+                  ></path>
+                  <g>
+                    <path
+                      d="M32.427 177.217l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.853 0l3.541 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735H93.74zm64.856 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.269 6.734 3.54-10.896-9.269-6.735h11.458zm64.852 0l3.54 10.896h11.457l-9.269 6.735 3.54 10.896-9.268-6.734-9.27 6.734 3.541-10.896-9.27-6.735h11.458zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.27 6.734 3.542-10.896-9.27-6.735h11.458zM64.855 204.786l3.54 10.897h11.458l-9.27 6.734 3.542 10.897-9.27-6.734-9.269 6.734 3.54-10.897-9.269-6.734h11.458zm64.852 0l3.54 10.897h11.457l-9.269 6.734 3.54 10.897-9.268-6.734-9.27 6.734 3.541-10.897-9.27-6.734h11.458zm64.855 0l3.54 10.897h11.458l-9.27 6.734 3.541 10.897-9.27-6.734-9.268 6.734 3.54-10.897-9.269-6.734h11.457zm64.855 0l3.54 10.897h11.458l-9.27 6.734 3.541 10.897-9.269-6.734-9.27 6.734 3.542-10.897-9.27-6.734h11.458zm64.852 0l3.54 10.897h11.457l-9.269 6.734 3.54 10.897-9.268-6.734-9.27 6.734 3.541-10.897-9.27-6.734h11.458z"
+                    ></path>
+                  </g>
+                  <g>
+                    <path
+                      d="M32.427 232.356l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.853 0l3.541 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735H93.74zm64.856 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.269 6.734 3.54-10.896-9.269-6.735h11.458zm64.852 0l3.54 10.896h11.457l-9.269 6.735 3.54 10.896-9.268-6.734-9.27 6.734 3.541-10.896-9.27-6.735h11.458zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.27-6.734-9.268 6.734 3.54-10.896-9.269-6.735h11.457zm64.855 0l3.54 10.896h11.458l-9.27 6.735 3.541 10.896-9.269-6.734-9.27 6.734 3.542-10.896-9.27-6.735h11.458z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            United States
+          </div>
+          <div class="socials-lg">
+            <a
+              target="_blank"
+              rel="noopener"
+              class="sc-fFeiMQ sc-bkkeKt gXpaJY jiWpkA DesktopFooter__StyledIconbutton-sc-1a5vcx1-4 jPKKbY"
+              href="https://www.facebook.com/Ticketmaster"
+              ><svg
+                viewBox="0 0 7 14"
+                width="16"
+                height="16"
+                fill="rgba(255, 255, 255, 1)"
+              >
+                <path
+                  d="M6.418 4.38H4.232V2.978c0-.528.357-.65.608-.65h1.543V.007L4.258 0C1.9 0 1.364 1.73 1.364 2.836V4.38H0V6.77h1.364v6.76h2.868V6.77h1.936l.25-2.39z"
+                ></path></svg
+            ></a>
+            <a
+              target="_blank"
+              rel="noopener"
+              class="sc-fFeiMQ sc-bkkeKt gXpaJY jiWpkA DesktopFooter__StyledIconbutton-sc-1a5vcx1-4 jPKKbY"
+              href="https://www.instagram.com/ticketmaster/?hl=en"
+              ><svg
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="rgba(255, 255, 255, 1)"
+              >
+                <path
+                  d="M8 1c1.901 0 2.14.008 2.886.042.745.034 1.254.152 1.7.326.46.178.85.418 1.24.807.388.389.628.78.807 1.24.173.445.29.954.325 1.699.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886-.034.745-.152 1.254-.325 1.7-.18.46-.419.85-.808 1.24-.389.388-.78.628-1.24.807-.445.173-.954.29-1.699.325C10.14 14.992 9.901 15 8 15c-1.901 0-2.14-.008-2.886-.042-.745-.034-1.254-.152-1.7-.325a3.432 3.432 0 0 1-1.24-.808c-.388-.389-.628-.78-.806-1.24-.174-.445-.292-.954-.326-1.699C1.008 10.14 1 9.901 1 8c0-1.901.008-2.14.042-2.886.034-.745.152-1.254.326-1.7.178-.46.418-.85.807-1.24.389-.388.78-.628 1.24-.806.445-.174.954-.292 1.699-.326C5.86 1.008 6.099 1 8 1zm-.043 9.389a2.346 2.346 0 1 1 0-4.692 2.346 2.346 0 0 1 0 4.692zm0-5.96a3.614 3.614 0 1 0 0 7.228 3.614 3.614 0 0 0 0-7.228zm4.608-.136a.858.858 0 1 0-1.717 0 .858.858 0 0 0 1.717 0z"
+                ></path></svg
+            ></a>
+            <a
+              target="_blank"
+              rel="noopener"
+              class="sc-fFeiMQ sc-bkkeKt gXpaJY jiWpkA DesktopFooter__StyledIconbutton-sc-1a5vcx1-4 jPKKbY"
+              href="https://twitter.com/ticketmaster"
+              ><svg
+                viewBox="0 0 14 12"
+                width="16"
+                height="16"
+                fill="rgba(255, 255, 255, 1)"
+              >
+                <path
+                  d="M14 1.353a5.704 5.704 0 0 1-1.65.454A2.89 2.89 0 0 0 13.613.211c-.555.33-1.17.57-1.824.7A2.862 2.862 0 0 0 9.693 0 2.879 2.879 0 0 0 6.82 2.885c0 .226.025.446.074.657A8.141 8.141 0 0 1 .975.528a2.881 2.881 0 0 0-.39 1.45c0 1.001.508 1.884 1.279 2.402a2.852 2.852 0 0 1-1.301-.361v.037c0 1.397.99 2.563 2.304 2.828a2.87 2.87 0 0 1-1.298.05 2.877 2.877 0 0 0 2.683 2.003A5.746 5.746 0 0 1 0 10.132a8.103 8.103 0 0 0 4.403 1.297c5.283 0 8.172-4.397 8.172-8.21 0-.124-.002-.249-.008-.373A5.846 5.846 0 0 0 14 1.353z"
+                ></path></svg
+            ></a>
+            <a
+              target="_blank"
+              rel="noopener"
+              class="sc-fFeiMQ sc-bkkeKt gXpaJY jiWpkA DesktopFooter__StyledIconbutton-sc-1a5vcx1-4 jPKKbY"
+              href="https://www.youtube.com/ticketmaster"
+              ><svg
+                viewBox="0 0 17 12"
+                width="16"
+                height="16"
+                fill="rgba(255, 255, 255, 1)"
+              >
+                <path
+                  d="M6.761 8.464V3.44l4.444 2.512L6.76 8.464zm9.884-6.605A2.13 2.13 0 0 0 15.142.355C13.816 0 8.5 0 8.5 0S3.184 0 1.858.355A2.13 2.13 0 0 0 .355 1.86C0 3.185 0 5.952 0 5.952s0 2.767.355 4.093a2.13 2.13 0 0 0 1.503 1.504c1.326.355 6.642.355 6.642.355s5.316 0 6.642-.355a2.13 2.13 0 0 0 1.503-1.504C17 8.72 17 5.952 17 5.952s0-2.767-.355-4.093z"
+                ></path></svg
+            ></a>
+            <a
+              target="_blank"
+              rel="noopener"
+              class="sc-fFeiMQ sc-bkkeKt gXpaJY jiWpkA DesktopFooter__StyledIconbutton-sc-1a5vcx1-4 jPKKbY"
+              href="https://www.linkedin.com/company/ticketmaster/"
+              ><svg
+                viewBox="0 0 19 18"
+                width="16"
+                height="16"
+                fill="rgba(255, 255, 255, 1)"
+              >
+                <path
+                  d="M14.78 5.917c-3.138 0-3.559 1.887-3.559 1.887l.004-1.874H6.99v11.648h4.236v-6.353s0-2.133 1.8-2.133c1.013 0 1.378.947 1.378 2.133v6.353h4.234v-6.353c0-3.315-1.441-5.308-3.857-5.308zM.637 17.577h4.219V5.918H.636v11.66zM2.747.638c-1.166 0-2.11.949-2.11 2.12 0 1.171.944 2.12 2.11 2.12 1.164 0 2.109-.949 2.109-2.12 0-1.171-.945-2.12-2.11-2.12z"
+                ></path></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
